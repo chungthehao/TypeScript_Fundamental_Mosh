@@ -9,13 +9,34 @@
 // }
 
 // Defining a shape of an object
-interface Point {
+// interface Point {
+//     x: number,
+//     y: number,
+//     draw: () => void
+// }
+
+class Point {
     x: number
     y: number
+
+    // ko cần truyền point vô nữa vì nó đang là cùng 1 class, có thể truy xuất được giá trị của nó
+    draw() {
+        // ...
+    }
+
+    getDistance(another: Point) {
+        // ...
+    }
 }
+
 // Solution 2: Use interface
 let drawPoint = (point: Point) => {
-    //...
+    // ...
+}
+
+// Các method được xây dựng rời rạc ko tập trung vào 1 chỗ --> class
+let getDistance = (pointA: Point, pointB: Point) => {
+    // ...
 }
 
 drawPoint({ x: 1, y: 2 })
